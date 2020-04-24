@@ -4,6 +4,7 @@ app/build
 app/public
 sourcemaps
 node_modules
+hooks
 www
 
 # Ignore . files and others.
