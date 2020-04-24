@@ -11,7 +11,7 @@ class Articles extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      results: []
     };
   }
 
