@@ -10,6 +10,7 @@ This project is a manual combination of the following generators' output:
 Useful commands:
 
     # Start Gulp + ReactJS component watcher:
+    # Note: this will fail on the first run with "Missing file" for the React root index.html...just restart it.
     cd ./app;
     yarn watch;
     
