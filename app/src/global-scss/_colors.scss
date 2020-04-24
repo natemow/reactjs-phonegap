@@ -1,0 +1,104 @@
+$primarycolors: (
+  white: (
+    base: #fff
+  ),
+  black: (
+    base: #000
+  ),
+  gray: (
+    shade2: #2b2529,
+    shade1: #363135,
+    base: #484247,
+    tint1: #7b726f,
+    tint2: #b9b7b4,
+    tint3: #f3f2f1
+  ),
+  blue: (
+    shade1: #085988,
+    base: #0e6ea6
+  ),
+  orange: (
+    shade1: #d9620d,
+    base: #f16d0e
+  )
+);
+
+$secondarycolors: (
+  red: (
+    base: #da0000
+  )
+);
+
+$socialmediacolors: (
+  facebook:   #3b5998,
+  twitter:    #1da1f2,
+  linkedin:   #007bb5,
+  youtube:    #f00,
+  instagram:  #c32aa3
+);
+
+// Primary Colors
+//
+// Colors:
+// primary-color(orange)          : #f16d0e - Orange
+// primary-color(orange, shade1)  : #d9620d - Orange, Shade 1
+// primary-color(blue)            : #0e6ea6 - Blue
+// primary-color(blue, shade1)    : #085988 - Blue, Shade 1
+//
+// Styleguide Colors.Primary Colors
+
+// Grayscale Colors
+//
+// Colors:
+// primary-color(gray, shade1)    : #363135 - Gray, Shade 1
+// primary-color(gray)            : #484247 - Gray
+// primary-color(gray, tint1)     : #7b726f - Gray, Tint 1
+// primary-color(gray, tint2)     : #b9b7b4 - Gray, Tint 2
+// primary-color(gray, tint3)     : #f3f2f1 - Gray, Tint 3
+//
+// Weight: 96
+//
+// Styleguide Colors.Grayscale Colors
+
+// Secondary Colors
+//
+// Colors:
+// primary-color(red)          : #da0000 - Red
+//
+// Weight: 97
+//
+// Styleguide Colors.Secondary Colors
+
+// Social Media Colors
+//
+// Colors:
+// sm-color(facebook)    : #3b5998 - Facebook
+// sm-color(twitter)     : #1da1f2 - Twitter
+// sm-color(linkedin)    : #007bb5 - LinkedIn
+// sm-color(youtube)     : #f00 - YouTube
+// sm-color(instagram)   : #c32aa3 - Instagram
+//
+// Weight: 98
+//
+// Styleguide Colors.Social Media Colors
+
+// Color Accessibility
+//
+// Below is a grid of all possible color combinations and whether or not they pass/fail accessibility standards. Refer to the legend below the table for more information if needed.
+//
+// Contrast:
+// primary-color(white)           : #fff - White
+// primary-color(gray, tint3)     : #f3f2f1 - Gray, Tint 3
+// primary-color(gray, tint2)     : #b9b7b4 - Gray, Tint 2
+// primary-color(gray, tint1)     : #7b726f - Gray, Tint 1
+// primary-color(gray)            : #484247 - Gray
+// primary-color(gray, shade1)    : #363135 - Gray, Shade 1
+// primary-color(black)           : #000 - Black
+// primary-color(orange)          : #f16d0e - Orange
+// primary-color(orange, shade1)  : #d9620d - Orange, Shade 1
+// primary-color(blue)            : #0e6ea6 - Blue
+// primary-color(blue, shade1)    : #085988 - Blue, Shade 1
+//
+// Weight: 99
+//
+// Styleguide Colors.Color Accessibility

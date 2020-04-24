@@ -1,0 +1,111 @@
+// Links
+//
+// Wrapper:
+// max-width: 700px;
+//
+// :hover    - Hover state
+// :focus    - Focus state
+// :active   - Active state
+// :disabled - Disabled state
+//
+// Markup:
+// <div class="wysiwyg-content">
+//   <p>This is a <a class="{{modifier_class}}" href="#">standard link</a> inside of WYSIWYG text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+// </div>
+//
+// Weight: -99
+//
+// Styleguide Components.Links
+a {
+  display: inline-block;
+  color: $link-color;
+  text-decoration: none;
+  transition: $ts $te;
+
+  @include hover {
+    color: darken($link-color, 10%);
+    outline: 0;
+  }
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+
+    &:not(.btn) {
+      display: inline;
+      position: relative;
+      color: primary-color(blue);
+      @include font-weight(semibold);
+      border-bottom: 1px solid primary-color(blue);
+
+      @include hover {
+        color: primary-color(orange);
+        border-color: transparent;
+      }
+
+      &:disabled,
+      &[disabled] {
+        color: primary-color(gray, tint2);
+        border-color: primary-color(gray, tint2);
+      }
+    }
+  }
+
+  // Serif Links
+  //
+  // Wrapper:
+  // max-width: 700px;
+  //
+  // :hover    - Hover state
+  // :focus    - Focus state
+  // :active   - Active state
+  // :disabled - Disabled state
+  //
+  // Markup:
+  // <a class="-serif {{modifier_class}}" href="#">View All</a>
+  //
+  // Weight: -99
+  //
+  // Styleguide Components.Serif Links
+  &.-serif {
+    position: relative;
+    color: primary-color(black);
+    font-family: $farnham;
+    @include rem(font-size, 14px);
+    font-style: italic;
+    @include font-weight(bold);
+    line-height: 1.75;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 1px;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      background-color: primary-color(orange);
+      transition: background-color .15s;
+    }
+
+    @include hover {
+      color: primary-color(blue);
+
+      &::after {
+        animation: .25s cubic-bezier(.555, .205, .295, .975) oldLinkUnderline, .25s cubic-bezier(.555, .205, .295, .975) .25s newLinkUnderline;
+        transition: background-color .1s cubic-bezier(.555, .205, .295, .975) 0s;
+      }
+    }
+
+    &.-dark {
+      color: primary-color(white);
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: primary-color(gray, tint2);
+    border-color: primary-color(gray, tint2);
+    pointer-events: none;
+  }
+}

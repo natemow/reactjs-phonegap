@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+  url('../fonts/icomoon.woff2?9dfywz1') format('woff2'),
+  url('../fonts/icomoon.ttf?9dfywz1') format('truetype'),
+  url('../fonts/icomoon.woff?9dfywz1') format('woff'),
+  url('../fonts/icomoon.svg?9dfywz1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Icomoon variables
+$icons: (
+  apple: '\e927',
+  google: '\e926',
+  outlook: '\e925',
+  flickr: '\e90e',
+  twitter: '\e90f',
+  linkedin: '\e910',
+  facebook: '\e911',
+  youtube: '\e912',
+  instagram: '\e913',
+  print: '\e914',
+  history: '\e915',
+  quote: '\e916',
+  calendar: '\e917',
+  upcoming: '\e929',
+  video: '\e918',
+  audio: '\e928',
+  share: '\e919',
+  phone: '\e91a',
+  webcast: '\e91b',
+  rsvp: '\e91c',
+  close: '\e91d',
+  email: '\e91e',
+  download: '\e91f',
+  link: '\e920',
+  arrow: '\e921',
+  search: '\e922',
+  filter: '\e92a',
+  rss: '\e92b',
+  home-sm: '\e923',
+  hamburger-alt-sm: '\e924',
+  hamburger-sm: '\e900',
+  download-sm: '\e901',
+  location-sm: '\e902',
+  link-sm: '\e903',
+  webcast-sm: '\e904',
+  camera-sm: '\e905',
+  time-sm: '\e906',
+  search-sm: '\e907',
+  close-sm: '\e908',
+  dropdown-sm: '\e909',
+  plus-sm: '\e90a',
+  minus-sm: '\e90b',
+  check-sm: '\e90c',
+  radio-sm: '\e90d'
+);
+
+%icomoonstyles {
+  @include icomoon;
+}
+
+@each $icon, $content in $icons {
+  .icon-#{$icon} {
+
+    &::before {
+      @extend %icomoonstyles;
+      content: '#{$content}';
+    }
+  }
+}
+
+// Site Icons
+//
+// Icons:
+// print     : icon-print
+// history   : icon-history
+// quote     : icon-quote
+// calendar  : icon-calendar
+// upcoming  : icon-upcoming
+// audio     : icon-audio
+// video     : icon-video
+// share     : icon-share
+// phone     : icon-phone
+// webcast   : icon-webcast
+// rsvp      : icon-rsvp
+// close     : icon-close
+// email     : icon-email
+// download  : icon-download
+// link      : icon-link
+// arrow     : icon-arrow
+// search    : icon-search
+// filter    : icon-filter
+// rss       : icon-rss
+// flickr    : icon-flickr
+// twitter   : icon-twitter
+// linkedin  : icon-linkedin
+// facebook  : icon-facebook
+// youtube   : icon-youtube
+// instagram : icon-instagram
+// apple     : icon-apple
+// google    : icon-google
+// outlook   : icon-outlook
+//
+// Styleguide Icons.Site Icons
+
+// Site Icons (Small)
+//
+// Icons:
+// home-sm          : icon-home-sm
+// hamburger-alt-sm : icon-hamburger-alt-sm
+// hamburger-sm     : icon-hamburger-sm
+// download-sm      : icon-download-sm
+// location-sm      : icon-location-sm
+// link-sm          : icon-link-sm
+// webcast-sm       : icon-webcast-sm
+// camera-sm        : icon-camera-sm
+// time-sm          : icon-time-sm
+// search-sm        : icon-search-sm
+// close-sm         : icon-close-sm
+// dropdown-sm      : icon-dropdown-sm
+// plus-sm          : icon-plus-sm
+// minus-sm         : icon-minus-sm
+// check-sm         : icon-check-sm
+// radio-sm         : icon-radio-sm
+//
+// Styleguide Icons.Site Icons Small

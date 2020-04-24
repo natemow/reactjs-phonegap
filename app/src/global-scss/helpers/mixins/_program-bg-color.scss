@@ -1,0 +1,146 @@
+// Program Background Color
+//
+// Sets the background color equal to the <body>'s [data-program] attribute
+//
+// Definition:
+// @mixin program-bg-color {
+//   @each $program, $color in $programcolors {
+//
+//     [data-program='#{$program}'] & {
+//       background-color: $color;
+//     }
+//   }
+// }
+//
+// Usage:
+// .sample {
+//   @include program-bg-color;
+// }
+//
+// Compiled:
+// [data-program='generic'] .sample {
+//   background-color: #0e6ea6;
+// }
+//
+// [data-program='africa-program'] .sample {
+//   background-color: #008299;
+// }
+//
+// [data-program='argentina-project'] .sample {
+//   background-color: #008094;
+// }
+//
+// [data-program='asia-program'] .sample {
+//   background-color: #763cbd;
+// }
+//
+// [data-program='brazil-institute'] .sample {
+//   background-color: #578000;
+// }
+//
+// [data-program='canada-institute'] .sample {
+//   background-color: #cf3439;
+// }
+//
+// [data-program='china-environment-forum'] .sample {
+//   background-color: #578000;
+// }
+//
+// [data-program='cold-war-international-history-project'] .sample {
+//   background-color: #5c5c5c;
+// }
+//
+// [data-program='commons-lab'] .sample {
+//   background-color: #d64000;
+// }
+//
+// [data-program='digital-futures-project'] .sample {
+//   background-color: #d64000;
+// }
+//
+// [data-program='environmental-change-and-security-program'] .sample {
+//   background-color: #007935;
+// }
+//
+// [data-program='global-europe-program'] .sample {
+//   background-color: #036bab;
+// }
+//
+// [data-program='global-womens-leadership-initiative'] .sample {
+//   background-color: #008094;
+// }
+//
+// [data-program='history-and-public-policy-program'] .sample {
+//   background-color: #036bab;
+// }
+//
+// [data-program='hyundai-motor-korea-foundation-center-for-korean-history-and-public-policy'] .sample {
+//   background-color: #0a7bc2;
+// }
+//
+// [data-program='kennan-institute'] .sample {
+//   background-color: #cf3339;
+// }
+//
+// [data-program='kissinger-institute-on-china-and-the-united-states'] .sample {
+//   background-color: #036bab;
+// }
+//
+// [data-program='latin-american-program'] .sample {
+//   background-color: #008094;
+// }
+//
+// [data-program='maternal-health-initiative'] .sample {
+//   background-color: #773dbe;
+// }
+//
+// [data-program='mexico-institute'] .sample {
+//   background-color: #007834;
+// }
+//
+// [data-program='middle-east-program'] .sample {
+//   background-color: #8f7200;
+// }
+//
+// [data-program='north-korea-international-documentation-project'] .sample {
+//   background-color: #cf3339;
+// }
+//
+// [data-program='nuclear-proliferation-international-history-project'] .sample {
+//   background-color: #036bab;
+// }
+//
+// [data-program='polar-institute'] .sample {
+//   background-color: #008094;
+// }
+//
+// [data-program='science-and-technology-innovation-program'] .sample {
+//   background-color: #008094;
+// }
+//
+// [data-program='the-islamists'] .sample {
+//   background-color: #d64000;
+// }
+//
+// [data-program='urban-sustainability-laboratory'] .sample {
+//   background-color: #036bab;
+// }
+//
+// Styleguide Sass Mixins.Program Background Color
+@mixin program-bg-color {
+  @each $program, $color in $programcolors {
+
+    [data-program='#{$program}'] & {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin program-color {
+  @each $program, $color in $programcolors {
+
+    [data-program='#{$program}'] & {
+      color: $color;
+    }
+  }
+}

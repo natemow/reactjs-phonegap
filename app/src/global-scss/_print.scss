@@ -1,0 +1,65 @@
+
+
+// sass-lint:disable-all
+@page {
+	margin: 10px;
+}
+
+@media print {
+
+  @page {
+  	counter-increment: page;
+  	counter-reset: page 1;
+  }
+
+  body{
+    padding: 40px 0;
+    color: black !important;
+  }
+
+  //make type black
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: black !important;
+  }
+
+  //hide these items
+  .gdpr-alert,
+  .text-block img,
+  .text-block-image,
+  .full-bleed-image,
+  .testimonial-single-image,
+  .insight-detail-hero-image,
+  .insight-detail-hero-image-caption,
+  .insight-detail-hero-author img,
+	.publication-detail-hero-image,
+	.book-detail-hero-image,
+	.book-detail-hero-author-image,
+  .text-block-image-caption,
+  .full-bleed-image-caption,
+  .site-footer-top,
+  .person-image,
+  .sticky-insight-flyout,
+  .teaser-carousel,
+  .full-width-cta,
+  .live-now-alert,
+  .site-footer-legal-nav,
+  .share-bar,
+  .site-header-right {
+    display: none !important;
+  }
+
+  //show link urls ?
+  // a[href]::after {
+  //  	content: ' (' attr(href) ')';
+  // }
+  //
+  //  a[href^='#']::after,
+  //  a[href^='javascript']::after {
+  //    content: '';
+  //  }
+}

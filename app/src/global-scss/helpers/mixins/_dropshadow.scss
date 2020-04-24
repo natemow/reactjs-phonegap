@@ -1,0 +1,23 @@
+// Dropshadow
+//
+// Mixin description
+//
+// Definition:
+// @mixin dropshadow {
+//
+// }
+//
+// Usage:
+// .sample {
+//   @include dropshadow;
+// }
+//
+// Compiled:
+// .sample {
+//   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .22);
+// }
+//
+// Styleguide Sass Mixins.Dropshadow
+@mixin dropshadow {
+  box-shadow: 0 2px 4px 0 rgba(primary-color(black), .22);
+}

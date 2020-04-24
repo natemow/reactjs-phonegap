@@ -1,0 +1,133 @@
+// Fancy Constraint
+//
+// A fancier content constraint that uses percentage padding instead of max-width to allow for single-side constraining
+//
+// $padding-side  = both - Side to apply padding to for constraint
+//
+// Definition:
+// @mixin fancy-constraint($padding-side: both) {
+//
+//   $constraints: (
+//     10: 30px,
+//     12: 6vw,
+//     13: 8.5vw,
+//     14: 11.5vw,
+//     15: 14vw,
+//     16: 16vw,
+//     17: 17.5vw,
+//     19: 18.75vw
+//   );
+//
+//   @if $padding-side == 'both' {
+//     padding: 0 20px;
+//   } @elseif $padding-side == 'left' {
+//     padding-left: 20px;
+//   } @elseif $padding-side == 'right' {
+//     padding-right: 20px;
+//   }
+//
+//   @each $breakpoint, $amount in $constraints {
+//     @include from($breakpoint) {
+//       @if $padding-side == 'both' {
+//         padding: 0 $amount;
+//       } @elseif $padding-side == 'left' {
+//         padding-left: $amount;
+//       } @elseif $padding-side == 'right' {
+//         padding-right: $amount;
+//       }
+//     }
+//   }
+// }
+//
+// Usage:
+// .sample {
+//   @include fancy-constraint;
+// }
+//
+// Compiled:
+// .sample {
+//   padding: 0 20px;
+// }
+//
+// @media (min-width: 1000px) {
+//   .sample {
+//     padding: 0 30px;
+//   }
+// }
+//
+// @media (min-width: 1200px) {
+//   .sample {
+//     padding: 0 6vw;
+//   }
+// }
+//
+// @media (min-width: 1300px) {
+//   .sample {
+//     padding: 0 8.5vw;
+//   }
+// }
+//
+// @media (min-width: 1400px) {
+//   .sample {
+//     padding: 0 11.5vw;
+//   }
+// }
+//
+// @media (min-width: 1500px) {
+//   .sample {
+//     padding: 0 14vw;
+//   }
+// }
+//
+// @media (min-width: 1600px) {
+//   .sample {
+//     padding: 0 16vw;
+//   }
+// }
+//
+// @media (min-width: 1700px) {
+//   .sample {
+//     padding: 0 17.5vw;
+//   }
+// }
+//
+// @media (min-width: 1920px) {
+//   .sample {
+//     padding: 0 18.75vw;
+//   }
+// }
+//
+// Styleguide Sass Mixins.Fancy Constraint
+@mixin fancy-constraint($padding-side: both) {
+
+  $constraints: (
+    10: 30px,
+    12: 6vw,
+    13: 8.5vw,
+    14: 11.5vw,
+    15: 14vw,
+    16: 16vw,
+    17: 17.5vw,
+    19: 18.75vw
+  );
+
+  @if $padding-side == 'both' {
+    padding: 0 20px;
+  } @elseif $padding-side == 'left' {
+    padding-left: 20px;
+  } @elseif $padding-side == 'right' {
+    padding-right: 20px;
+  }
+
+  @each $breakpoint, $amount in $constraints {
+    @include from($breakpoint) {
+      @if $padding-side == 'both' {
+        padding: 0 $amount;
+      } @elseif $padding-side == 'left' {
+        padding-left: $amount;
+      } @elseif $padding-side == 'right' {
+        padding-right: $amount;
+      }
+    }
+  }
+}

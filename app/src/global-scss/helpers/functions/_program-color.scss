@@ -1,0 +1,21 @@
+// Program Color
+//
+// Gets hex value from Sass map
+//
+// $color = null - Color name from the Sass map
+//
+// Function:
+// @function program-color($color) {
+//   @return map-get($programcolors, $color);
+// }
+//
+// Usage:
+// color: program-color(orange);
+//
+// Compiled:
+// color: #f2530f;
+//
+// Styleguide Sass Functions.Program Color
+@function program-color($color) {
+  @return map-get($programcolors, $color);
+}

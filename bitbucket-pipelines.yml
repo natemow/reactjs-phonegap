@@ -1,0 +1,33 @@
+image: jameelmoses/ubuntu-php7-composer-node-yarn-awscli
+
+definitions:
+  caches:
+    custom-node: ./static/node_modules
+
+pipelines:
+  branches:
+    development:
+      - step:
+          caches:
+            - custom-node
+          script:
+            # Set known_hosts.
+            - mkdir -p ~/.ssh && touch ~/.ssh/known_hosts
+            - ssh-keyscan -t rsa bitbucket.org >> ~/.ssh/known_hosts
+            # - ssh-keyscan -t rsa $OS_PHP7_IP >> ~/.ssh/known_hosts
+            - (umask 077 && echo $BITBUCKET_BLANKET | base64 -d > ~/.ssh/id_rsa)
+
+            # Install and compile FE dependencies.
+            - yarn
+            - export ENVIRONMENT="staging"
+            - yarn build
+
+            # AWS setup, and sync of FE code to S3 buckets.
+            - export PATH=~/.local/bin:$PATH
+            - export AWS_DEFAULT_REGION=us-east-1
+            - export AWS_ACCESS_KEY_ID=$_AWS_HTML_GLOBAL_ID
+            - export AWS_SECRET_ACCESS_KEY=$_AWS_HTML_GLOBAL_KEY
+            - aws s3 sync dist/ s3://demo.html.interactive-strategies.com --delete
+
+            # Build and deploy code.
+            # - cd ../

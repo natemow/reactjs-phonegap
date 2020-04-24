@@ -1,0 +1,532 @@
+// sass-lint:disable force-element-nesting
+
+// Headers
+//
+// Weight: -99
+//
+// Styleguide Typography.Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $body-font;
+  @include font-weight(bold);
+  margin: 0 0 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Sans Headers
+//
+// Alternate Gothic No1 D
+//
+// Wrapper:
+// max-width: 800px;
+//
+// Markup:
+// <h1 class="h1">H1 (47px) - Lorem Ipsum Solor Domet</h1>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+// <h2 class="h2">H2 (42px) - Lorem Ipsum Solor Domet</h2>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+// <h3 class="h3">H3 (33px) - Lorem Ipsum Solor Domet</h3>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+// <h4 class="h4">H4 (29px) - Lorem Ipsum Solor Domet</h4>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+// <h5 class="h5">H5 (21px) - Lorem Ipsum Solor Domet</h5>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+// <h6 class="h6">H6 (12px) - Oswald - Lorem Ipsum Solor Domet</h6>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+//
+// Styleguide Typography.Headers.Sans
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $header-color;
+  font-family: $header-font;
+  @include font-weight(regular);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  transition: $ts $te;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  // Serif Headers
+  //
+  // Farnham Display. Used in WYSIWYGs.
+  //
+  // Wrapper:
+  // max-width: 800px;
+  //
+  // Markup:
+  // <div class="wysiwyg-content">
+  //   <h1>H1 (32px) - Lorem Ipsum Solor Domet</h1>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  //   <h2>H2 (30px) - Lorem Ipsum Solor Domet</h2>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  //   <h3>H3 (28px) - Lorem Ipsum Solor Domet</h3>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  //   <h4>H4 (26px) - Lorem Ipsum Solor Domet</h4>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  //   <h5>H5 (22px) - Lorem Ipsum Solor Domet</h5>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  //   <h6>H6 (18px) - Lorem Ipsum Solor Domet</h6>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat dolores eos.</p>
+  // </div>
+  //
+  // Styleguide Typography.Headers.Serif
+  &.-serif {
+    font-family: $farnham;
+    @include font-weight(medium);
+    text-transform: none;
+    margin: 0 0 20px;
+    transition: $ts $te;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.wysiwyg-content,
+.mce-content-body,
+.cke_editable { // sass-lint:disable-line class-name-format
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $header-color;
+    font-family: $farnham;
+    @include font-weight(medium);
+    text-transform: none;
+    transition: $ts $te;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    @include rem(font-size, 32px);
+    line-height: (41 / 32);
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    @include rem(font-size, 30px);
+    line-height: (40 / 30);
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    @include rem(font-size, 28px);
+    line-height: (40 / 28);
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    @include rem(font-size, 26px);
+    line-height: (40 / 26);
+    margin-bottom: 9px;
+  }
+
+  h5 {
+    @include rem(font-size, 22px);
+    line-height: (40 / 24);
+    margin-bottom: 7px;
+  }
+
+  h6 {
+    @include rem(font-size, 18px);
+    line-height: (40 / 18);
+    margin-bottom: 3px;
+  }
+}
+
+.h1 {
+  @include rem(font-size, 47px);
+  letter-spacing: rem(2.54px);
+  line-height: (38 / 47);
+
+  &.-serif {
+    @include rem(font-size, 32px);
+    letter-spacing: 0;
+    line-height: (36 / 32);
+  }
+}
+
+.h2 {
+  @include rem(font-size, 29px);
+  letter-spacing: rem(1.96px);
+  line-height: (40 / 42);
+
+  @include from(7) {
+    @include rem(font-size, 42px);
+  }
+
+  &.-serif {
+    @include rem(font-size, 30px);
+    letter-spacing: 0;
+    line-height: (37 / 30);
+  }
+}
+
+.h3 {
+  @include rem(font-size, 33px);
+  letter-spacing: rem(2.75px);
+  line-height: 1;
+
+  &.-serif {
+    @include rem(font-size, 22px);
+    letter-spacing: 0;
+    line-height: (40 / 22);
+  }
+}
+
+.h4 {
+  @include rem(font-size, 29px);
+  letter-spacing: rem(2.42px);
+  line-height: (32 / 29);
+
+  &.-serif {
+    @include rem(font-size, 26px);
+    letter-spacing: 0;
+    line-height: (40 / 26);
+    margin-bottom: 9px;
+  }
+}
+
+.h5 {
+  @include rem(font-size, 21px);
+  letter-spacing: rem(1.84px);
+  line-height: 1;
+
+  &.-serif {
+    @include rem(font-size, 22px);
+    letter-spacing: 0;
+    line-height: (40 / 24);
+    margin-bottom: 7px;
+  }
+}
+
+.h6 {
+  font-family: $oswald;
+  @include rem(font-size, 12px);
+  letter-spacing: rem(1.38px);
+  line-height: (17 / 12);
+
+  &.-serif {
+    @include rem(font-size, 18px);
+    letter-spacing: 0;
+    line-height: (40 / 18);
+    margin-bottom: 3px;
+  }
+}
+
+// Paragraphs
+//
+// Weight: -98
+//
+// Styleguide Typography.Paragraphs
+
+// Sans Paragraphs
+//
+// Acumin Pro
+//
+// .-large - Large
+// .-small - Small
+//
+// Wrapper:
+// max-width: 800px;
+//
+// Markup:
+// <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+// <p class="{{modifier_class}}">Duis aute irure <em>"dolor in reprehenderit in voluptate velit esse"</em> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.</p>
+// <p class="{{modifier_class}}">Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi.</p>
+//
+// Styleguide Typography.Paragraphs.Sans
+p {
+  font-family: $body-font;
+  @include rem(font-size, 14px);
+  line-height: (29 / 14);
+  margin: 0 0 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+    @include rem(font-size, 16px);
+    line-height: (33 / 16);
+  }
+
+  &.-large {
+    @include rem(font-size, 16px);
+    line-height: (33 / 16);
+  }
+
+  &.-small {
+    @include rem(font-size, 13px);
+    line-height: (20 / 13);
+  }
+
+  strong {
+    @include font-weight(semibold);
+  }
+
+  // Serif Paragraphs
+  //
+  // Farnham Display
+  //
+  // .-large - Large
+  // .-small - Small
+  //
+  // Wrapper:
+  // max-width: 800px;
+  //
+  // Markup:
+  // <p class="-serif {{modifier_class}}">Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  // <p class="-serif {{modifier_class}}">Duis aute irure <em>"dolor in reprehenderit in voluptate velit esse"</em> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.</p>
+  // <p class="-serif {{modifier_class}}">Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi.</p>
+  //
+  // Styleguide Typography.Paragraphs.Serif
+  &.-serif {
+    font-family: $farnham;
+
+    &.-large {
+      @include rem(font-size, 16px);
+      line-height: (37 / 16);
+    }
+
+    &.-small {
+      @include rem(font-size, 12px);
+      line-height: (25 / 12);
+    }
+
+    strong {
+      @include font-weight(medium);
+    }
+  }
+}
+
+ol,
+ul {
+  font-family: $body-font;
+  margin: 0 0 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    @include rem(font-size, 16px);
+    line-height: (33 / 16);
+  }
+}
+
+// Unordered Lists
+//
+// Wrapper:
+// max-width: 800px;
+//
+// Markup:
+// <div class="wysiwyg-content">
+//   <h3>H3 - Headline</h3>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+//   <ul>
+//     <li>More frequent, less intrusive system updates with minimal to no downtime. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//       <ul>
+//         <li>More frequent, less intrusive system updates with minimal to no downtime. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//         <li>Instant access to new enhancements. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//         <li>New, more powerful user interface. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//       </ul>
+//     </li>
+//     <li>Instant access to new enhancements. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//     <li>New, more powerful user interface. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//   </ul>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+// </div>
+//
+// Weight: -97
+//
+// Styleguide Typography.Unordered Lists
+ul {
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+    @include kill-bullets;
+    margin: 0 0 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+
+      &::before {
+        content: '\25AA';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: primary-color(orange);
+        font-family: $body-font;
+        @include rem(font-size, 20px);
+        @include rem(line-height, 33px);
+      }
+    }
+  }
+}
+
+// Ordered Lists
+//
+// Wrapper:
+// max-width: 800px;
+//
+// Markup:
+// <div class="wysiwyg-content">
+//   <h3>H3 - Headline</h3>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+//   <ol>
+//     <li>More frequent, less intrusive system updates with minimal to no downtime. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+//       <ol>
+//         <li>More frequent, less intrusive system updates with minimal to no downtime. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//         <li>Instant access to new enhancements. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//         <li>New, more powerful user interface. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//       </ol>
+//     </li>
+//     <li>Instant access to new enhancements. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//     <li>New, more powerful user interface. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+//   </ol>
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+// </div>
+//
+// Weight: -96
+//
+// Styleguide Typography.Ordered Lists
+ol {
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+    @include kill-bullets;
+    counter-reset: item;
+    margin: 0 0 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & > li {
+      position: relative;
+      counter-increment: item;
+      padding-left: 24px;
+
+      &::before {
+        content: counters(item, '.');
+        position: absolute;
+        top: 0;
+        right: -8px;
+        color: primary-color(orange);
+        font-family: $farnham;
+        @include rem(font-size, 14px);
+        @include font-weight(medium);
+        @include rem(line-height, 33px);
+        margin-right: 100%;
+      }
+
+      ol {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+
+// Blockquotes
+//
+// Wrapper:
+// max-width: 980px;
+//
+// Markup:
+// <blockquote>
+//   <p>No other organization combines authoritative regional analysis and deep historical scholarship to inform and improve the quality of public discourse and policymaking.</p>
+// </blockquote>
+//
+// Weight: -95
+//
+// Styleguide Typography.Blockquotes
+blockquote {
+  position: relative;
+  padding: 72px 0 45px 49px;
+  border-left: 1px solid rgba(#979797, .4);
+  margin: 0 0 20px;
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+    margin: 45px 0;
+
+    @include from(7) {
+      margin: 60px 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include icon(quote) {
+    position: absolute;
+    top: 36px;
+    left: 49px;
+    color: primary-color(orange);
+    @include rem(font-size, 22px);
+  }
+
+  p {
+    font-family: $farnham;
+    @include rem(font-size, 21px);
+    @include font-weight(medium);
+    line-height: (41 / 32);
+
+    @include from(5) {
+      @include rem(font-size, 26px);
+    }
+
+    @include from(7) {
+      @include rem(font-size, 32px);
+    }
+  }
+}

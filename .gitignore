@@ -1,0 +1,15 @@
+
+app/.env
+app/build
+app/public
+sourcemaps
+node_modules
+www
+
+# Ignore . files and others.
+.DS_Store
+.bundle
+*.ini
+*.log
+apc.php
+error_log

@@ -1,0 +1,246 @@
+// Buttons
+//
+// Weight: -98
+//
+// Styleguide Components.Buttons
+
+// Default Buttons
+//
+// :hover    - Hover state
+// :focus    - Focus state
+// :active   - Active state
+// :disabled - Disabled state
+//
+// Markup:
+// <a class="btn {{modifier_class}}" href="#">Link Button</a>
+// <a class="btn icon-rsvp {{modifier_class}}" href="#">RSVP for Event</a>
+// <button class="{{modifier_class}}">Standard Button</button>
+// <input type="submit" class="{{modifier_class}}" value="Submit Button" />
+// <input type="reset" class="{{modifier_class}}" value="Reset Button" />
+//
+// Weight: -98
+//
+// Styleguide Components.Buttons.Default
+button,
+.btn,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  display: inline-block;
+  cursor: pointer;
+  background: primary-color(orange);
+  color: primary-color(white);
+  font-family: $header-font;
+  @include rem(font-size, 16px);
+  letter-spacing: rem(2.13px);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 24px 11px;
+  border: 0;
+  border-radius: 0;
+  transition: $ts $te;
+
+  @include hover {
+    background: primary-color(orange, shade1);
+    color: primary-color(white);
+    border-color: primary-color(orange, shade1);
+    outline: 0;
+  }
+
+  .wysiwyg-content &,
+  .mce-content-body &,
+  .cke_editable & { // sass-lint:disable-line class-name-format
+    margin: 10px 10px 0 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &:disabled,
+  &.slick-disabled {
+    background: primary-color(gray, tint2);
+    color: primary-color(white);
+    border-color: primary-color(gray, tint2);
+    pointer-events: none;
+  }
+
+  &.slick-disabled {
+    cursor: default;
+    pointer-events: auto;
+  }
+
+  &[class^='icon-'],
+  &[class*=' icon-'] {
+    padding: 10.25px 24px 11px;
+
+    &::before {
+      position: relative;
+      top: 1px;
+      margin-right: 8px;
+    }
+  }
+
+  // Outlined Buttons
+  //
+  // :hover    - Hover state
+  // :focus    - Focus state
+  // :active   - Active state
+  // :disabled - Disabled state
+  //
+  // Markup:
+  // <a class="btn -outlined {{modifier_class}}" href="#">Link Button</a>
+  // <a class="btn -outlined icon-rsvp {{modifier_class}}" href="#">RSVP for Event</a>
+  // <button class="-outlined {{modifier_class}}">Standard Button</button>
+  // <input type="submit" class="-outlined {{modifier_class}}" value="Submit Button" />
+  // <input type="reset" class="-outlined {{modifier_class}}" value="Reset Button" />
+  //
+  // Styleguide Components.Buttons.Outlined
+  &.-outlined,
+  &.outlined {
+    background: none;
+    color: primary-color(black);
+    padding: 12px 24px 10px;
+    border: 1px solid primary-color(orange);
+
+    &[class^='icon-'],
+    &[class*=' icon-'] {
+      padding: 9.25px 24px 10px;
+    }
+
+    &:disabled,
+    &.slick-disabled {
+      background: primary-color(gray, tint2);
+      color: primary-color(white);
+      border-color: primary-color(gray, tint2);
+      pointer-events: none;
+    }
+
+    // Outlined Buttons (Dark)
+    //
+    // :hover    - Hover state
+    // :focus    - Focus state
+    // :active   - Active state
+    // :disabled - Disabled state
+    //
+    // Markup:
+    // <div style="display: inline-block; background: #363135; padding: 15px;">
+    //   <a class="btn -outlined -dark {{modifier_class}}" href="#">Link Button</a>
+    //   <a class="btn -outlined -dark icon-rsvp {{modifier_class}}" href="#">RSVP for Event</a>
+    //   <button class="-outlined -dark {{modifier_class}}">Standard Button</button>
+    //   <input type="submit" class="-outlined -dark {{modifier_class}}" value="Submit Button" />
+    //   <input type="reset" class="-outlined -dark {{modifier_class}}" value="Reset Button" />
+    // </div>
+    //
+    // Styleguide Components.Buttons.Outlined Dark
+    &.-dark {
+      color: primary-color(white);
+    }
+
+    @include hover {
+      background: primary-color(orange, shade1);
+      color: primary-color(white);
+      border-color: primary-color(orange, shade1);
+    }
+  }
+
+  // Arrow Buttons
+  //
+  // .-prev    - Previous
+  // :hover    - Hover state
+  // :focus    - Focus state
+  // :active   - Active state
+  // :disabled - Disabled state
+  //
+  // Markup:
+  // <a class="btn -arrow {{modifier_class}}" href="#"></a>
+  // <button class="-arrow {{modifier_class}}"></button>
+  //
+  // Weight: 99
+  //
+  // Styleguide Components.Buttons.Arrow
+  &.-arrow {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    padding: 0;
+
+    @include icon(arrow) {
+      flex: none;
+      @include rem(font-size, 21px);
+    }
+
+    &.-prev {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Tags
+  //
+  // :hover    - Hover state
+  // :focus    - Focus state
+  // :active   - Active state
+  // :disabled - Disabled state
+  //
+  // Markup:
+  // <a class="btn -tag {{modifier_class}}" href="#">Tag</a>
+  //
+  // Weight: 98
+  //
+  // Styleguide Components.Buttons.Tags
+  &.-tag {
+    background: none;
+    color: primary-color(blue);
+    font-family: $oswald;
+    @include rem(font-size, 10px);
+    letter-spacing: rem(1.37px);
+    padding: 10px 12px;
+    border: 1px solid primary-color(blue);
+
+    @include hover {
+      background: primary-color(blue);
+      color: primary-color(white);
+      border-color: primary-color(blue);
+    }
+  }
+}
+
+// Play button for videos
+.play-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 54px;
+  height: 54px;
+  background: primary-color(orange);
+  color: primary-color(white);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: $ts $te;
+
+  @include icon(video) {
+    flex: none;
+    margin-left: 4px;
+  }
+
+  &::after {
+    content: '';
+    @include absolute(-6px, -6px, -6px, -6px);
+    border: 1px solid primary-color(orange);
+    border-radius: 50%;
+    transition: $ts $te;
+  }
+}
