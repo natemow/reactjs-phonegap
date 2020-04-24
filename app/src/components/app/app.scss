@@ -1,0 +1,68 @@
+
+.app {
+
+  &-header {
+    background: primary-color(black);
+    padding: 10px 0;
+
+    &-logo {
+      height: 30px;
+      margin: 10px auto;
+      pointer-events: none;
+    }
+
+    &-nav-items {
+      @include kill-bullets;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      > li {
+        padding: 0 20px;
+        line-height: 1;
+
+        &:last-child {
+          border: 0;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        color: primary-color(white);
+        @include rem(font-size, 14px);
+        @include font-weight(semibold);
+      }
+    }
+  }
+
+  &-main {
+    padding: 30px 20px;
+  }
+
+  &-footer {
+    background: primary-color(white);
+    border-top: solid 1px primary-color(gray, tint2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 10px 0;
+
+    &-nav-items {
+      @extend .app-header-nav-items;
+
+      > li {
+        border-right: solid 1px primary-color(black);
+      }
+
+      a {
+        text-transform: capitalize;
+        color: primary-color(black);
+        @include rem(font-size, 13px);
+        @include font-weight(normal);
+      }
+    }
+  }
+
+}
