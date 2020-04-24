@@ -5,38 +5,62 @@
     background: primary-color(black);
     padding: 10px 0;
 
+    %text {
+      text-transform: uppercase;
+      color: primary-color(white);
+      @include rem(font-size, 14px);
+      @include font-weight(semibold);
+    }
+
+    &-inner {
+      @extend %text;
+      color: primary-color(white);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 $mobile-x-padding;
+    }
+
+    &-flyout {
+      transform: rotate(180deg);
+    }
+
     &-logo {
       height: 30px;
       margin: 10px auto;
       pointer-events: none;
     }
 
-    &-nav-items {
-      @include kill-bullets;
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
+    &-nav {
+      display: block;
 
-      > li {
-        padding: 0 20px;
-        line-height: 1;
+      &-items {
+        @include kill-bullets;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
 
-        &:last-child {
-          border: 0;
+        > li {
+          border-right: solid 1px primary-color(gray, tint2);
+          padding: 0 $mobile-x-padding;
+          line-height: 1;
+
+          &:last-child {
+            border: 0;
+          }
+        }
+
+        a {
+          @extend %text;
         }
       }
 
-      a {
-        text-transform: uppercase;
-        color: primary-color(white);
-        @include rem(font-size, 14px);
-        @include font-weight(semibold);
-      }
     }
+
   }
 
   &-main {
-    padding: 30px 20px;
+    padding: 30px $mobile-x-padding;
   }
 
   &-footer {
@@ -49,20 +73,25 @@
     z-index: 1;
     padding: 10px 0;
 
+    &-inner {
+      @extend %text;
+    }
+
     &-nav-items {
       @extend .app-header-nav-items;
 
       > li {
-        border-right: solid 1px primary-color(black);
+        border-right: solid 1px primary-color(gray, tint2);
       }
 
       a {
         text-transform: capitalize;
         color: primary-color(black);
-        @include rem(font-size, 13px);
+        @include rem(font-size, 14px);
         @include font-weight(normal);
       }
     }
+
   }
 
 }
