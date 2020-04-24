@@ -4,7 +4,7 @@
 This project is a manual combination of the following generators' output:
 
 * [PhoneGap](http://docs.phonegap.com/getting-started/3-create-your-app/cli), `phonegap create app --id "com.interactivestrategies.phonegap" --name "Demo";`
-* [Create React App](https://create-react-app.dev), `create-react-app app;`
+* [Create React App](https://github.com/facebook/create-react-app), `create-react-app app;`
 * [Artax](https://www.npmjs.com/package/artax), `artax new;`
 
 Useful commands:
