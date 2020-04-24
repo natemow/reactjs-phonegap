@@ -9,13 +9,13 @@ This project is a manual combination of the following generators' output:
 
 Useful commands:
 
-        # Start Gulp + ReactJS component watcher:
-        cd ./app;
-        yarn watch;
-        
-        # Production build:
-        cd ./app;
-        yarn build;
-        
-        # Serve packaged ./www outout to PhoneGap mobile dev app:
-        phonegap serve --autoreload;
+    # Start Gulp + ReactJS component watcher:
+    cd ./app;
+    yarn watch;
+    
+    # Production build:
+    cd ./app;
+    yarn build;
+    
+    # Serve packaged ./www outout to PhoneGap mobile dev app:
+    phonegap serve --autoreload;
