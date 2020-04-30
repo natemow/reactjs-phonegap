@@ -1,18 +1,20 @@
 
+@import '../menu/menu';
+
+%wrapper-text {
+  text-transform: uppercase;
+  color: primary-color(white);
+  @include rem(font-size, 14px);
+  @include font-weight(semibold);
+}
+
 .app {
 
   &-header {
     background: primary-color(black);
 
-    %text {
-      text-transform: uppercase;
-      color: primary-color(white);
-      @include rem(font-size, 14px);
-      @include font-weight(semibold);
-    }
-
     &-inner {
-      @extend %text;
+      @extend %wrapper-text;
       color: primary-color(white);
       display: flex;
       flex-direction: row;
@@ -31,30 +33,7 @@
     }
 
     &-nav {
-      display: block;
-      padding: 10px 0;
-
-      &-items {
-        @include kill-bullets;
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-
-        > li {
-          border-right: solid 1px primary-color(gray, tint2);
-          padding: 0 $mobile-x-padding;
-          line-height: 1;
-
-          &:last-child {
-            border: 0;
-          }
-        }
-
-        a {
-          @extend %text;
-        }
-      }
-
+      @include menu;
     }
 
   }
@@ -71,14 +50,13 @@
     left: 0;
     right: 0;
     z-index: 1;
-    padding: 10px 0;
 
     &-inner {
-      @extend %text;
+      @extend %wrapper-text;
     }
 
-    &-nav-items {
-      @extend .app-header-nav-items;
+    &-nav {
+      @include menu;
 
       > li {
         border-right: solid 1px primary-color(gray, tint2);
@@ -90,9 +68,7 @@
         @include rem(font-size, 14px);
         @include font-weight(normal);
       }
-
     }
-
   }
 
 }

@@ -1,0 +1,26 @@
+
+@mixin menu {
+  display: block;
+  padding: 10px 0;
+
+  &-items {
+    @include kill-bullets;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    > li {
+      border-right: solid 1px primary-color(gray, tint2);
+      padding: 0 $mobile-x-padding;
+      line-height: 1;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    a {
+      @extend %wrapper-text;
+    }
+  }
+}

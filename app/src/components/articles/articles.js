@@ -41,28 +41,25 @@ class Articles extends React.Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div className="loading">Loading...</div>;
-    } else {
-
-      const data = [];
-      results.map(item => (
-        data.push(item.rendered)
-      ));
-
-      return (
-        <div className="faceted-search-content">
-          <h2 className="h3">{this.props.label}</h2>
-          <div className="faceted-search-results" dangerouslySetInnerHTML={{ __html: data.join('') }} />
-        </div>
-      );
     }
+
+    const data = [];
+    results.map(item => (
+      data.push(item.rendered)
+    ));
+
+    return (
+      <div className="faceted-search-content">
+        <h2 className="h3">{this.props.label}</h2>
+        <div className="faceted-search-results" dangerouslySetInnerHTML={{ __html: data.join('') }} />
+      </div>
+    );
   }
 
 }
 
-const element = <Articles label="Label" />;
-
 ReactDOM.render(
-  element,
+  <Articles label="Label" />,
   document.getElementById('root')
 );
 

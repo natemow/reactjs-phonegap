@@ -41,8 +41,7 @@ require('require-dir')('./tasks');
 // -----------------------------------------------------------------------------
 //   Task: Build
 // -----------------------------------------------------------------------------
-gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'assets')));
-
+gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'assets'), 'build:phonegap'));
 
 // -----------------------------------------------------------------------------
 //   Task: Serve
