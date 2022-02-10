@@ -83,7 +83,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
     "gulp-twig": "^1.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "require-dir": "^1.2.0",
     "slugg": "^1.2.1",
     "terser-brunch": "^4.0.0",
